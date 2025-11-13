@@ -1,76 +1,108 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nguyễn Quốc Kỳ — Profile</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body, html {
-      height:100%;
-      font-family:'Inter', sans-serif;
-      overflow:hidden;
-      background:#1a1a1a;
-      color:#fff;
-      display:flex; justify-content:center; align-items:center; text-align:center;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body,
+    html {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+      background: linear-gradient(270deg, #1a1a1a, #38b2ac, #1a1a1a);
+      background-size: 600% 600%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
     .container {
-      background:#272727;
-      padding:40px 30px;
-      border-radius:25px;
-      box-shadow:0 8px 20px rgba(0,0,0,0.6);
-      max-width:380px; width:100%;
+      background: #272727;
+      padding: 40px 30px;
+      border-radius: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      max-width: 380px;
+      width: 100%;
     }
     .avatar {
-      width:150px; height:150px;
-      border-radius:50%;
-      object-fit:cover;
-      border:4px solid #38b2ac;
-      margin:0 auto 25px auto;
-      display:block;
-      animation:float 3s ease-in-out infinite;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #38b2ac;
+      margin: 0 auto 25px auto;
+      display: block;
+      animation: float 3s ease-in-out infinite;
     }
     @keyframes float {
-      0%,100% { transform:translateY(0); }
-      50% { transform:translateY(-15px); }
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
     }
     h1 {
-      font-weight:700;
-      font-size:2.8rem;
-      color:#38b2ac;
-      margin-bottom:8px;
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #38b2ac;
+      margin-bottom: 8px;
     }
     p.description {
-      font-weight:400;
-      font-size:1.1rem;
-      color:#ccc;
-      margin-bottom:28px;
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 28px;
     }
     .links a {
-      display:inline-block;
-      margin:0 10px;
-      padding:12px 14px;
-      border-radius:50%;
-      background:#38b2ac;
-      color:#1a1a1a;
-      font-size:1.3rem;
-      transition: background-color .3s ease, color .3s ease, transform .3s ease;
-      box-shadow:0 4px 8px rgba(56,178,172,0.5);
+      display: inline-block;
+      margin: 0 10px;
+      padding: 12px 14px;
+      border-radius: 50%;
+      background: #38b2ac;
+      color: #1a1a1a;
+      font-size: 1.3rem;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 8px rgba(56, 178, 172, 0.5);
     }
     .links a:hover {
-      background:#2c7a7b;
-      color:#e6fffa;
-      transform:scale(1.2);
-      box-shadow:0 6px 14px rgba(44,122,123,0.7);
+      background: #2c7a7b;
+      color: #e6fffa;
+      transform: scale(1.2);
+      box-shadow: 0 6px 14px rgba(44, 122, 123, 0.7);
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img class="avatar" src="avatar.png" alt="KyCuccc">
+    <img
+      class="avatar"
+      src="16e4c1da-bc98-4ce5-94fb-e422778da783.png"
+      alt="Avatar Nguyễn Quốc Kỳ"
+    />
     <h1>Bố Kỳ</h1>
     <p class="description">Front-end Developer • React • TypeScript</p>
     <div class="links">

@@ -164,20 +164,19 @@
       </div>
     </div>
   </script src="script.js"></script>
-<audio id="bg-music" controls loop>
-  <source src="static/music.mp3" type="audio/mpeg">
-  Trình duyệt của bạn không hỗ trợ audio.
+<audio id="tetMusic" loop>
+    <source src="https://taobillgia.lol/tet.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-window.addEventListener("load", () => {
-  const music = document.getElementById("bg-music");
-  music.play().catch(() => {
-    document.addEventListener("click", () => music.play(), { once: true });
-  });
-});
-</script>
+    const audio = document.getElementById('tetMusic');
 
+    if (window.location.pathname !== '/xemphim') {
+        document.body.addEventListener('click', function() {
+            audio.play().catch(e => console.log('Lỗi phát nhạc:', e));
+        }, { once: true });
+    }
+</script>
   </body>
   <script src="./static/js/script.js?v=1"></script>
   <script src="./static/js/main.js"></script>

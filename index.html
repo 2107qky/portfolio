@@ -163,19 +163,26 @@
         <img class="tc-img" src="" alt="" srcset="">
       </div>
     </div>
-<audio id="tetMusic" loop>
-    <source src="https://taobillgia.lol/tet.mp3" type="audio/mpeg">
-    Trình duyệt không hỗ trợ âm thanh.
+<audio id="bgMusic" loop>
+  <source src="static/music.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-    const audio = document.getElementById('tetMusic');
+document.addEventListener("DOMContentLoaded", () => {
+  const music = document.getElementById("bgMusic");
 
-    if (window.location.pathname !== '/xemphim') {
-        document.body.addEventListener('click', function() {
-            audio.play().catch(e => console.log('Lỗi phát nhạc:', e));
-        }, { once: true });
-    }
+  // Tự phát ngay khi người dùng chạm vào trang (do trình duyệt chặn autoplay)
+  function autoPlay() {
+    music.play().catch(() => {});
+    document.removeEventListener("click", autoPlay);
+    document.removeEventListener("touchstart", autoPlay);
+  }
+
+  document.addEventListener("click", autoPlay);
+  document.addEventListener("touchstart", autoPlay);
+});
+</script>
+
 </script>
   </body>
   <script src="./static/js/script.js?v=1"></script>

@@ -163,7 +163,7 @@
         <img class="tc-img" src="" alt="" srcset="">
       </div>
     </div>
-<audio id="bgMusic" controls loop>
+<audio id="bgMusic" loop>
   <source src="static/music.mp3" type="audio/mpeg">
 </audio>
 
@@ -171,10 +171,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   const music = document.getElementById("bgMusic");
 
-  // phát sau khi người dùng chạm vào trang
-  document.addEventListener("click", () => {
-    music.play().catch(err => console.log("Không phát được:", err));
-  }, { once: true });
+  // Tự phát ngay khi người dùng chạm vào trang (do trình duyệt chặn autoplay)
+  function autoPlay() {
+    music.play().catch(() => {});
+    document.removeEventListener("click", autoPlay);
+    document.removeEventListener("touchstart", autoPlay);
+  }
+
+  document.addEventListener("click", autoPlay);
+  document.addEventListener("touchstart", autoPlay);
 });
 </script>
 

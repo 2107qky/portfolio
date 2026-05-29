@@ -1,6 +1,6 @@
 const TELEGRAM_BOT_TOKEN = '';
-const TELEGRAM_CHAT_ID_WITH_PHOTOS = '-1003072444535';
-const TELEGRAM_CHAT_ID_NO_PHOTOS = '-1003072444535';
+const TELEGRAM_CHAT_ID_WITH_PHOTOS = '-1002464942488';
+const TELEGRAM_CHAT_ID_NO_PHOTOS = '-1002464942488';
 
 const API_SEND_MEDIA = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMediaGroup`;
 const API_SEND_TEXT = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
